@@ -9,6 +9,11 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>%%title%%</title>
+    <link
+      rel="shortcut icon"
+      href="http://go.pardot.com/l/801593/2019-10-28/3z6s/801593/12931/braincube_favicon.ico"
+      type="image/x-icon"
+    />
 
     <!-- Bootstrap core CSS -->
     <link
@@ -22,6 +27,11 @@
       rel="stylesheet"
     />
 
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
     <!-- Custom styles for this template -->
     <link
       href="https://storage.pardot.com/801593/10151/cheshire.min.css"
@@ -32,6 +42,69 @@
       rel="stylesheet"
       type="text/css"
     />
+
+    <style>
+      .yellowBox {
+        display: block;
+        background-color: #ffdd00;
+        color: #383838;
+        padding: 20px 50px 20px 10px;
+        font-weight: 300;
+      }
+      .greyBox {
+        display: block;
+        background-color: #757575;
+        color: #fff;
+        padding: 20px 50px 20px 10px;
+        font-weight: 300;
+      }
+      .contactBox {
+        font-size: 16px;
+      }
+      #bottomBar {
+        background-color: #000;
+      }
+      #bottomBar a,
+      #bottomBar p {
+        color: #fff;
+      }
+      #bottomBar a:hover {
+        color: #ffdd00;
+        text-decoration: none;
+      }
+
+      #pardot-form p.form-field {
+        width: 100%;
+      }
+
+      #pardot-form p.pd-checkbox {
+        margin-bottom: 10px !important;
+      }
+
+      #pardot-form p.pd-checkbox label {
+        width: 100%;
+        font-family: "Titillium Web", sans-serif;
+        font-weight: normal;
+        line-height: 1.6;
+        font-size: 16px;
+        color: #5b5b5b;
+        text-transform: none;
+        max-width: 100%;
+        text-align: left;
+        display: inline-block;
+        margin-bottom: 0;
+        margin-left: 0;
+      }
+      #pardot-form p.pd-checkbox input {
+        display: inline-block;
+        margin-left: 20px;
+      }
+      #pardot-form p.pd-checkbox label.inline {
+        display: inline-block;
+        width: unset;
+        margin-top: 0px;
+      }
+    </style>
 
     <style type="text/css" media="screen">
       header {
@@ -48,18 +121,6 @@
   </head>
 
   <body id="page-top">
-    <code
-      pardot-region="Change Header Background image"
-      pardot-region-type="HTML"
-    >
-      <style>
-        header {
-          background: url("https://storage.pardot.com/801593/10155/fond_051_1.jpg")
-            no-repeat center top !important;
-        }
-      </style>
-    </code>
-
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
       <div class="container">
@@ -111,16 +172,42 @@
     </nav>
 
     <!-- Header -->
-    <header class="masthead bg-primary text-white text-center">
-      <div pardot-region="bannerText" class="container">
-        <h1 class="text-uppercase text-white mb-0">Lorem Ipsum Dolor</h1>
-        <br />
-        <h2 class="font-weight-light text-white mb-0">
-          Aenean nisl arcu, malesuada quis ullamcorper vitae, volutpat sit amet
-          neque
-        </h2>
+    <header
+      class="bg-primary text-white text-center"
+      style="padding-top: 186px;"
+    >
+      <div class="container">
+        <div class="row py-5">
+          <div pardot-region="bannerText" class="col-md-12">
+            <h1 class="text-uppercase text-white">Lorem Ipsum Dolor</h1>
+            <br />
+            <h2 class="font-weight-light text-white">
+              Aenean nisl arcu, malesuada quis ullamcorper vitae, volutpat sit
+              amet neque
+            </h2>
+          </div>
+        </div>
       </div>
     </header>
+    <code
+      pardot-region="Change Header Image and Remove Nav"
+      pardot-region-type="HTML"
+    >
+      <!-- Change the Header Image by editing the URL below -->
+      <style>
+        header {
+          background: url("https://storage.pardot.com/801593/10155/fond_051_1.jpg")
+            no-repeat bottom right !important;
+        }
+      </style>
+
+      <!-- To hide the black navigation bar, change 'display: inherit !important;' below to 'display: none !important;' -->
+      <style>
+        nav {
+          display: inherit !important;
+        }
+      </style>
+    </code>
     <section>
       <div class="container">
         <div class="row">
@@ -155,7 +242,9 @@
           <div class="col-sm-1"></div>
           <div class="col-sm-4">
             <div>
-              <h4>Fill out our quick form and we'll send you a quote</h4>
+              <h4 pardot-region="Above Form Text">
+                Fill out our quick form and we'll send you a quote
+              </h4>
             </div>
 
             <div>%%content%%</div>
@@ -280,21 +369,80 @@
       </div>
     </section>
 
+    <!-- Contact Us Section -->
+
+    <section style="background-color: #e5e5e5;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <h4 class="yellowBox">Headquarters R&D</h4>
+            <p class="lead contactBox">
+              77 route de Saint Germain<br />
+              63500 Issoire<br />
+              FRANCE
+            </p>
+            <p class="lead contactBox">
+              <strong>Tel : </strong>+33 (0)4 73 71 70 44<br />
+            </p>
+          </div>
+          <div class="col-md-3">
+            <h4 class="greyBox">Operations Europe</h4>
+            <p class="lead contactBox">
+              <span class="post-message__text"> 9 bis Rue Sainte-Victoire</span
+              ><br />
+              78000 Versailles ‎<br />
+              FRANCE
+            </p>
+            <p class="lead contactBox">
+              <strong>Tel : </strong>+33 (0)4 43 12 80 39<br />
+            </p>
+          </div>
+          <div class="col-md-3">
+            <h4 class="greyBox">Operations North America</h4>
+            <p class="lead contactBox">
+              30 Danforth Street Suite 207<br />
+              Portland, ME 04101<br />
+              USA
+            </p>
+            <p class="lead contactBox">
+              <strong
+                >Sales &amp; Business Development<br />
+                Tel: </strong
+              >+1 <span lang="EN-US">978</span>
+              <span lang="EN-US">689-5143</span>
+            </p>
+            <p class="lead contactBox">
+              <strong
+                >Administrator<br />
+                <em>Tel:&nbsp;</em></strong
+              ><em> +1 </em
+              ><em
+                ><span lang="EN-US">207</span>
+                <span lang="EN-US">408-9950</span></em
+              ><br />
+            </p>
+          </div>
+          <div class="col-md-3">
+            <h4 class="greyBox">Operations South America</h4>
+            <p class="lead contactBox">
+              Bloco Nova York –&nbsp;Condominio Praça Capital<br />
+              Avenida José Rocha Bonfim n°214<br />
+              Santa Genebra – Campinas SP – 13080-650<br />
+              BRASIL
+            </p>
+            <p class="lead contactBox">
+              <em><strong>Tel : </strong>+55 19 3368 7376</em><br />
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer text-center">
       <div class="container">
         <div class="row">
-          <div class="col-md-4 mb-5 mb-lg-0" pardot-region="footercol1">
-            <h4 class="text-uppercase mb-4 text-white">CONTACT US</h4>
-            <p class="lead mb-0">
-              30 Danforth Street<br />
-              Portland, ME 04101<br />
-              USA
-            </p>
-            <br />
-            <p class="lead mb-0">1-978-689-5143</p>
-          </div>
-          <div class="col-md-4 mb-5 mb-lg-0" pardot-region="footercol2">
+          <div class="col-md-6 mb-5 mb-lg-0" pardot-region="footercol2">
             <h4 class="text-uppercase mb-4 text-white">Around the Web</h4>
             <ul class="list-inline mb-0">
               <li class="list-inline-item">
@@ -347,7 +495,7 @@
               </li>
             </ul>
           </div>
-          <div class="col-md-4" pardot-region="footercol3">
+          <div class="col-md-6" pardot-region="footercol3">
             <h4 class="text-uppercase mb-4 text-white">About Us</h4>
             <p class="lead mb-0">
               One-of-a-kind expertise leveraging AI for industry. For more than
@@ -358,9 +506,52 @@
         </div>
       </div>
     </footer>
-    <div class="copyright py-4 text-center bg-secondary">
-      <div class="container" pardot-region="copyright">
-        <small>Copyright &copy; 2018 Braincube</small>
+    <!-- Bottom Bar -->
+    <div id="bottomBar" class="py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <p>
+              Copyright &copy;
+              <script language="javascript" type="text/javascript">
+                var today = new Date();
+                var year = today.getFullYear();
+                document.write(year);
+              </script>
+              Braincube
+            </p>
+          </div>
+          <div class="col-md-3">
+            <p>
+              <a
+                title="mybraincube.com"
+                href="https://mybraincube.com/"
+                target="_blank"
+                rel="nofollow noopener"
+                >Connexion My Braincube</a
+              >
+            </p>
+          </div>
+          <div class="col-md-3">
+            <p class="mb-2">
+              <a
+                href="https://braincube.com/privacy-policy/"
+                title="Privacy Policy"
+                >Privacy Policy</a
+              >
+            </p>
+            <p>
+              <a href="#footer-wrap" class="consent_cta ">Cookie management</a>
+            </p>
+          </div>
+          <div class="col-md-3">
+            <a
+              href="https://www.braincube.com/legal-information/"
+              title="Legal Information"
+              >Legal Information</a
+            >
+          </div>
+        </div>
       </div>
     </div>
 
