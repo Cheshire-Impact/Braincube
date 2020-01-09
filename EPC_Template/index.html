@@ -176,6 +176,23 @@
         color: #ffdd00;
         border-color: #3a3a3a;
       }
+
+      /* Updates 1.8.20 */
+
+      #main-content {
+        padding-top: 110px;
+      }
+
+      
+       
+      /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+      @media (min-width: 768px) {  
+        #main-content {
+        padding-top: 150px;
+      }
+      }
+       
+      
     </style>
 
     <style type="text/css" media="screen">
@@ -200,39 +217,14 @@
           <a href="https://braincube.com/" target="_blank"
             ><img
               src="https://storage.pardot.com/801593/10153/Braincube_logo_carre.png"
-              width="113"
-              height="113"
+              width="56"
+              height="56"
           /></a>
         </div>
       </div>
     </nav>
 
-    <!-- Header -->
-    <header
-      class="bg-primary text-white text-center"
-      style="padding-top: 186px;"
-    >
-      <div class="container">
-        <div class="row py-5">
-          <div pardot-region="bannerText" class="col-md-12 py-3">
-            <h1 class="text-uppercase text-white">Email Preference Center</h1>
-          </div>
-        </div>
-      </div>
-    </header>
-    <code
-      pardot-region="Change Header Image and Remove Nav"
-      pardot-region-type="HTML"
-    >
-      <!-- Change the Header Image by editing the URL below -->
-      <style>
-        header {
-          background: url("https://storage.pardot.com/801593/10155/fond_051_1.jpg")
-            no-repeat bottom right !important;
-          background-size: cover;
-        }
-      </style>
-
+    
       <!-- To hide the black navigation bar, change 'display: inherit !important;' below to 'display: none !important;' -->
       <style>
         nav {
@@ -240,7 +232,7 @@
         }
       </style>
     </code>
-    <section>
+    <section id="main-content">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -265,75 +257,6 @@
             <a href="https://braincube.com/" target="_blank"
               ><strong>Contact Us</strong></a
             >
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Us Section -->
-
-    <section style="background-color: #e5e5e5;">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-3">
-            <h4 class="yellowBox">Headquarters R&D</h4>
-            <p class="lead contactBox">
-              77 route de Saint Germain<br />
-              63500 Issoire<br />
-              FRANCE
-            </p>
-            <p class="lead contactBox">
-              <strong>Tel : </strong>+33 (0)4 73 71 70 44<br />
-            </p>
-          </div>
-          <div class="col-md-3">
-            <h4 class="greyBox">Operations Europe</h4>
-            <p class="lead contactBox">
-              <span class="post-message__text"> 9 bis Rue Sainte-Victoire</span
-              ><br />
-              78000 Versailles ‎<br />
-              FRANCE
-            </p>
-            <p class="lead contactBox">
-              <strong>Tel : </strong>+33 (0)4 43 12 80 39<br />
-            </p>
-          </div>
-          <div class="col-md-3">
-            <h4 class="greyBox">Operations North America</h4>
-            <p class="lead contactBox">
-              30 Danforth Street Suite 207<br />
-              Portland, ME 04101<br />
-              USA
-            </p>
-            <p class="lead contactBox">
-              <strong
-                >Sales &amp; Business Development<br />
-                Tel: </strong
-              >+1 <span lang="EN-US">978</span>
-              <span lang="EN-US">689-5143</span>
-            </p>
-            <p class="lead contactBox">
-              <strong
-                >Administrator<br />
-                <em>Tel:&nbsp;</em></strong
-              ><em> +1 </em
-              ><em
-                ><span lang="EN-US">207</span>
-                <span lang="EN-US">408-9950</span></em
-              ><br />
-            </p>
-          </div>
-          <div class="col-md-3">
-            <h4 class="greyBox">Operations South America</h4>
-            <p class="lead contactBox">
-              Bloco Nova York –&nbsp;Condominio Praça Capital<br />
-              Avenida José Rocha Bonfim n°214<br />
-              Santa Genebra – Campinas SP – 13080-650<br />
-              BRASIL
-            </p>
-            <p class="lead contactBox">
-              <em><strong>Tel : </strong>+55 19 3368 7376</em><br />
-            </p>
           </div>
         </div>
       </div>
@@ -476,5 +399,39 @@
 
     <!-- Custom scripts for this template -->
     <script src="https://storage.pardot.com/801593/10141/cheshire.min.js"></script>
+
+
+   <!-- Check/Uncheck Checkboxes -->
+   <script type="text/javascript">
+    $(document).ready(function() {
+      // Uncheck the last checkbox when any other checkbox is checked
+      $(".pd-checkbox input")
+        .not(":last")
+        .click(function() {
+          $(".pd-checkbox input")
+            .last()
+            .prop("checked", false);
+        });
+
+      // When first checkbox is checked, check all of the remaining except the last
+      $(".pd-checkbox input")
+        .first()
+        .click(function() {
+          $(".pd-checkbox input")
+            .not(":last")
+            .prop("checked", true);
+        });
+
+      // When last checkbox is checked, uncheck all of the remaining
+      $(".pd-checkbox input")
+        .last()
+        .click(function() {
+          $(".pd-checkbox input")
+            .not(":last")
+            .prop("checked", false);
+        });
+    });
+  </script>
+
   </body>
 </html>
