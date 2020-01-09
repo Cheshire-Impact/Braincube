@@ -746,7 +746,7 @@
           .first()
           .click(function() {
             $(".pd-checkbox input")
-              .not(":last")
+              .not(":last,:first")
               .prop("checked", true);
           });
 
