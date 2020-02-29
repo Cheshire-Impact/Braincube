@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="http://go.pardot.com" />
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="%%description%%" />
+    <title>Manage Your Communications Preferences</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+      crossorigin="anonymous"
+    />
+    <style>
+
+      /* hide the regular checkbox */
+      .pd-checkbox input {
+          opacity: 100;
+          position: relative;
+          float:left;
+
+      }
+      /* position the label */
+      .pd-checkbox input, .pd-checkbox label {
+          display: inline-block;
+          vertical-align: middle;
+          margin: 5px;
+          cursor: pointer;
+      }
+
+      }
+      /* style the unchecked checkbox */
+      .pd-checkbox input + label:before {
+          content: '';
+          background: #fff;
+          border: 2px solid #ddd;
+          display: inline-block;
+          vertical-align: middle;
+          width: 18px;
+          height:18px;
+          padding: 5px;
+          margin-right: 10px;
+          text-align: center;
+          font-size:15px;
+          line-height:18px;
+      }
+      /* style the checked checkbox */
+      .pd-checkbox input:checked + label:before {
+          content: "\f00c";
+          font-family: 'Times';
+          background: #56CFD2;
+          color: #fff;
+          border-color:#3eb9bc;
+      }
+    </style>
+
+    <style>
+      body form.form p.no-label,
+      body form.form p.email-pref {
+          margin-left:0;
+      }
+
+      body form.form input.text {
+          width:50%; /* give it a width to be responsive */
+          padding:5px;
+      }
+
+      /* Submit button properties */
+      body form.form p.submit input {
+          background:#3A3A3A;
+          color:#ffdd00;
+          border:0;
+          padding:10px 35px;
+          font-style: normal;
+          font-weight: 800;
+          text-transform: uppercase;
+          line-height: 1.6923em;
+          letter-spacing: 2px;
+          cursor:pointer;
+      }
+      /* Submit button hover */
+      body form.form p.submit input:hover {
+          background: #636363;
+          color:#ffdd00;
+      }
+      /* the submit button wrapper */
+      body form.form p.submit {
+          width:100%;  /* give it a width in order to center the button */
+          text-align:center; /* center the button */
+      }
+
+      #pardot-form input[type="checkbox"] {
+          form.form input[type="checkbox"]
+      }
+    </style>
+
+    <meta name="robots" content="noindex, nofollow" />
+    <script type="text/javascript">
+      piAId = "802593";
+      piCId = "26635";
+      piHostname = "pi.pardot.com";
+
+      (function() {
+        function async_load() {
+          var s = document.createElement("script");
+          s.type = "text/javascript";
+          s.src =
+            ("https:" == document.location.protocol
+              ? "https://pi"
+              : "http://cdn") + ".pardot.com/pd.js";
+          var c = document.getElementsByTagName("script")[0];
+          c.parentNode.insertBefore(s, c);
+        }
+        if (window.attachEvent) {
+          window.attachEvent("onload", async_load);
+        } else {
+          window.addEventListener("load", async_load, false);
+        }
+      })();
+    </script>
+  </head>
+  <body class="bg-light">
+    <div class="container">
+      <div class="py-3">
+        <div class="text-left">
+          <div>
+            <div class="preference-container">
+              <form
+                accept-charset="UTF-8"
+                method="post"
+                action="https://info.braincube.com/manage-email-preferences?epc_hash=GBBtx1JYZ1rUFmBGH3OBqp3sa74P3xC7LR75gQnRiEs&mode=preview"
+                class="form"
+                id="pardot-form"
+              >
+                <p>
+                  <a href="https://braincube.com/"
+                    ><img
+                      alt=""
+                      border="0"
+                      height="150"
+                      src="https://info.braincube.com/l/801593/2019-10-23/3sz4/801593/12367/Logo_Braincube_HD.png"
+                      style="width: 150px; height: 150px; border-width: 0px; border-style: solid;"
+                      width="150"
+                  /></a>
+                </p>
+
+                <p>
+                  Want the latest in digital transformation news? Let us know
+                  what you&#39;d like to receive from Braincube!
+                </p>
+
+                <p
+                  class="form-field  pd-email required    %%form-field-dependency-css%%"
+                >
+                  <label class="field-label" for="piEmailPrefEmail"
+                    >Email</label
+                  >
+
+                  <input
+                    type="text"
+                    name="piEmailPrefEmail"
+                    id="piEmailPrefEmail"
+                    value=""
+                    class="text"
+                    readonly="readonly"
+                  />
+                </p>
+                <div id="error_for_piEmailPrefEmail" style="display:none"></div>
+
+                <p
+                  class="form-field  %%form-field-class-type%% required    %%form-field-dependency-css%%"
+                >
+                  <input
+                    type="hidden"
+                    name="piEmToken"
+                    id="piEmToken"
+                    value=""
+                    readonly="readonly"
+                  />
+                </p>
+                <div id="error_for_piEmToken" style="display:none"></div>
+
+                <p
+                  class="form-field email-pref pd-checkbox     %%form-field-dependency-css%%"
+                >
+                  <input
+                    type="checkbox"
+                    name="list[]"
+                    id="list_10977"
+                    value="10977"
+                  />&nbsp;<label class="inline" for="list_10977"
+                    >Industry News</label
+                  >
+
+                  <span class="description"
+                    >Get updates on the latest manufacturing and IIOT news
+                    (Monthly)</span
+                  >
+                </p>
+                <div id="error_for_list_10977" style="display:none"></div>
+
+                <p
+                  class="form-field email-pref pd-checkbox     %%form-field-dependency-css%%"
+                >
+                  <input
+                    type="checkbox"
+                    name="list[]"
+                    id="list_10983"
+                    value="10983"
+                  />&nbsp;<label class="inline" for="list_10983"
+                    >Administration Emails</label
+                  >
+
+                  <span class="description">Important information </span>
+                </p>
+                <div id="error_for_list_10983" style="display:none"></div>
+
+                <p
+                  class="form-field email-pref pd-checkbox     %%form-field-dependency-css%%"
+                >
+                  <input
+                    type="checkbox"
+                    name="list[]"
+                    id="list_10979"
+                    value="10979"
+                  />&nbsp;<label class="inline" for="list_10979"
+                    >All communication</label
+                  >
+
+                  <span class="description"
+                    >I'd like to receive all of your communications
+                    (Weekly)</span
+                  >
+                </p>
+                <div id="error_for_list_10979" style="display:none"></div>
+
+                <p
+                  class="form-field email-pref pd-checkbox     %%form-field-dependency-css%%"
+                >
+                  <input
+                    type="checkbox"
+                    name="list[]"
+                    id="list_10617"
+                    value="10617"
+                  />&nbsp;<label class="inline" for="list_10617"
+                    >Braincube Newsletter</label
+                  >
+
+                  <span class="description"
+                    >A little bit of this and that--product updates, customer
+                    stories, and insightful tips and tricks for using Braincube
+                    (Quarterly)</span
+                  >
+                </p>
+                <div id="error_for_list_10617" style="display:none"></div>
+
+                <p
+                  class="form-field email-pref pd-checkbox     %%form-field-dependency-css%%"
+                >
+                  <input
+                    type="checkbox"
+                    name="list[]"
+                    id="list_10981"
+                    value="10981"
+                  />&nbsp;<label class="inline" for="list_10981"
+                    >Customer Stories</label
+                  >
+
+                  <span class="description"
+                    >Hear how customers have been successful with Braincube
+                    (monthly)</span
+                  >
+                </p>
+                <div id="error_for_list_10981" style="display:none"></div>
+
+                <p
+                  class="form-field email-pref pd-checkbox     %%form-field-dependency-css%%"
+                >
+                  <input
+                    type="checkbox"
+                    name="list[]"
+                    id="list_10975"
+                    value="10975"
+                  />&nbsp;<label class="inline" for="list_10975">Events</label>
+
+                  <span class="description"
+                    >Receive information about upcoming webinars, conferences,
+                    and other Braincube happenings (Monthly)</span
+                  >
+                </p>
+                <div id="error_for_list_10975" style="display:none"></div>
+
+                <p
+                  style="position:absolute; width:190px; left:-9999px; top: -9999px;visibility:hidden;"
+                >
+                  <label for="pi_extra_field">Comments</label>
+                  <input
+                    type="text"
+                    name="pi_extra_field"
+                    id="pi_extra_field"
+                  />
+                </p>
+
+                <!-- forces IE5-8 to correctly submit UTF8 content  -->
+                <input name="_utf8" type="hidden" value="&#9731;" />
+
+                <p class="submit">
+                  <input type="submit" accesskey="s" value="Save" />
+                </p>
+
+                <script type="text/javascript">
+                  //<![CDATA[
+
+                  var anchors = document.getElementsByTagName("a");
+                  for (var i = 0; i < anchors.length; i++) {
+                    var anchor = anchors[i];
+                    if (
+                      anchor.getAttribute("href") &&
+                      !anchor.getAttribute("target")
+                    ) {
+                      anchor.target = "_top";
+                    }
+                  }
+
+                  //]]>
+                </script>
+              </form>
+            </div>
+          </div>
+
+          <footer class="my-5 pt-5 text-muted text-center text-small">
+            <p class="mb-1">&copy; 2019 Braincube</p>
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                <a href="https://braincube.com/privacy-policy/">Privacy</a>
+              </li>
+            </ul>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
